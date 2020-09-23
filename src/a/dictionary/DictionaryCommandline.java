@@ -1,7 +1,7 @@
 package a.dictionary;
 // to use map.entry method to iterate the hashmap
 import java.util.Map;
-// in order to run program from commandline
+// in order to run program from command line
 import a.dictionary.DictionaryManagement;
 
 
@@ -37,6 +37,14 @@ public class DictionaryCommandline {
 		showAllWords();
 	}
 	
+	public void dictionaryAdvanced() {
+		String path = "src/assets/dictionary.txt";
+		dicMan.insertFromFile(path);
+		showAllWords();
+		dicMan.dictionaryLookup();
+		
+	}
+	
 	/* Initialize the app
 	 * 
 	 */
@@ -45,7 +53,7 @@ public class DictionaryCommandline {
 		DictionaryCommandline dicCom = new DictionaryCommandline();
 		
 		//Using the dictionary
-		dicCom.dictionaryBasic();
+		dicCom.dictionaryAdvanced();
 	}
 	
 }

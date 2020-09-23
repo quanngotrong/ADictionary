@@ -1,0 +1,4 @@
+dog	cho
+cat	meo
+chicken	ga
+pig	lon
