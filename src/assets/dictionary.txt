@@ -2,3 +2,5 @@ dog	cho
 cat	meo
 chicken	ga
 pig	lon
+doooo	cho
+doasdaf	ga

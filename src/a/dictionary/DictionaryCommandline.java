@@ -1,6 +1,8 @@
 package a.dictionary;
 // to use map.entry method to iterate the hashmap
 import java.util.Map;
+import java.util.Scanner;
+
 // in order to run program from command line
 import a.dictionary.DictionaryManagement;
 
@@ -37,11 +39,26 @@ public class DictionaryCommandline {
 		showAllWords();
 	}
 	
+	/*initialize the first advance dictionary
+	 * it can read information from file and save it
+	 * show all words and can find specified words
+	 */
 	public void dictionaryAdvanced() {
-		String path = "src/assets/dictionary.txt";
+		String path = "assets/dictionary.txt";
 		dicMan.insertFromFile(path);
 		showAllWords();
+		dicMan.dictionaryExportToFile();
+		prefixSearch();
 		dicMan.dictionaryLookup();
+	}
+	
+	// auto-complete feature
+	public void prefixSearch() {
+		Scanner scanx = new Scanner(System.in);
+		System.out.println("what prefix word you want to search?");
+		String prefix = scanx.nextLine();
+		dicMan.searchingAdvance(prefix);
+//		scanx.close();
 		
 	}
 	
